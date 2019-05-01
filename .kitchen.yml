@@ -1,0 +1,30 @@
+---
+driver:
+  name: vagrant
+  customize:
+    cpus: 2
+    memory: 4096
+
+provisioner:
+  name: chef_solo
+  always_update_cookbooks: true
+
+verifier:
+  name: inspec
+
+transport:
+  name: winrm
+  elevated: true
+
+platforms:
+  - name: windows2019
+    driver:
+      box: tas50/windows_2019
+      vm_hostname: test-delprof
+
+suites:
+  - name: default
+    run_list:
+      - recipe[delprof::default]
+    attributes:
+
