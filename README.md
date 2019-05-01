@@ -32,6 +32,13 @@ Property                                            | Description               
 `frequency_modifier`                                        | Can be `1-365`, `1-52`, etc.                                  | String | nil
 `flags`                                        | Flags to modify DelProf2 run. (`/d`, `/ed`)                                  | String | nil
 
+```ruby
+delprof 'Install' do
+    install_dir 'C:\\delprof\\'
+    action :install
+end
+```
+
 
 See [the DelProf2 docs](https://helgeklein.com/free-tools/delprof2-user-profile-deletion-tool/) for more info.
 
