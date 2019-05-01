@@ -1,6 +1,6 @@
 # Delprof2 Cookbook
 
-Installs Delprof2 and can optionally configire a scheduled task.
+Installs Delprof2 and can optionally configure a scheduled task.
 
 ## Requirements
 
